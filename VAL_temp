@@ -1,0 +1,207 @@
+Type-checking load
+...action passes type checking.
+Type-checking unload
+...action passes type checking.
+Type-checking drive
+...action passes type checking.
+Checking plan: /home/eifler/XPP/test/pp_ckeck/out//plan_567.sas
+Plan to validate:
+
+Plan size: 21
+1:
+(load p1 t0 l1)
+ 
+2:
+(drive t1 l4 l0 level11 level2 level13)
+ 
+3:
+(drive t1 l0 l5 level9 level2 level11)
+ 
+4:
+(load p2 t1 l5)
+ 
+5:
+(load p0 t1 l5)
+ 
+6:
+(drive t1 l5 l3 level5 level4 level9)
+ 
+7:
+(load p4 t1 l3)
+ 
+8:
+(load p3 t1 l3)
+ 
+9:
+(drive t1 l3 l2 level3 level2 level5)
+ 
+10:
+(unload p3 t1 l2)
+ 
+11:
+(drive t1 l2 l1 level1 level2 level3)
+ 
+12:
+(unload p4 t1 l1)
+ 
+13:
+(unload p2 t1 l1)
+ 
+14:
+(unload p0 t1 l1)
+ 
+15:
+(load p0 t0 l1)
+ 
+16:
+(drive t0 l1 l0 level10 level3 level13)
+ 
+17:
+(unload p1 t0 l0)
+ 
+18:
+(drive t0 l0 l4 level8 level2 level10)
+ 
+19:
+(unload p0 t0 l4)
+ 
+20:
+(drive t0 l4 l0 level6 level2 level8)
+ 
+21:
+(drive t0 l0 l2 level3 level3 level6)
+ 
+
+Plan Validation details
+-----------------------
+
+Checking next happening (time 1)
+Deleting (at p1 l1)
+Adding (in p1 t0)
+Updating (total-cost) (0) by 1 increase
+
+Checking next happening (time 2)
+Deleting (at t1 l4)
+Deleting (fuel t1 level13)
+Adding (at t1 l0)
+Adding (fuel t1 level11)
+Updating (total-cost) (1) by 1 increase
+
+Checking next happening (time 3)
+Deleting (at t1 l0)
+Deleting (fuel t1 level11)
+Adding (at t1 l5)
+Adding (fuel t1 level9)
+Updating (total-cost) (2) by 1 increase
+
+Checking next happening (time 4)
+Deleting (at p2 l5)
+Adding (in p2 t1)
+Updating (total-cost) (3) by 1 increase
+
+Checking next happening (time 5)
+Deleting (at p0 l5)
+Adding (in p0 t1)
+Updating (total-cost) (4) by 1 increase
+
+Checking next happening (time 6)
+Deleting (at t1 l5)
+Deleting (fuel t1 level9)
+Adding (at t1 l3)
+Adding (fuel t1 level5)
+Updating (total-cost) (5) by 1 increase
+
+Checking next happening (time 7)
+Deleting (at p4 l3)
+Adding (in p4 t1)
+Updating (total-cost) (6) by 1 increase
+
+Checking next happening (time 8)
+Deleting (at p3 l3)
+Adding (in p3 t1)
+Updating (total-cost) (7) by 1 increase
+
+Checking next happening (time 9)
+Deleting (at t1 l3)
+Deleting (fuel t1 level5)
+Adding (at t1 l2)
+Adding (fuel t1 level3)
+Updating (total-cost) (8) by 1 increase
+
+Checking next happening (time 10)
+Deleting (in p3 t1)
+Adding (at p3 l2)
+Updating (total-cost) (9) by 1 increase
+
+Checking next happening (time 11)
+Deleting (at t1 l2)
+Deleting (fuel t1 level3)
+Adding (at t1 l1)
+Adding (fuel t1 level1)
+Updating (total-cost) (10) by 1 increase
+
+Checking next happening (time 12)
+Deleting (in p4 t1)
+Adding (at p4 l1)
+Updating (total-cost) (11) by 1 increase
+
+Checking next happening (time 13)
+Deleting (in p2 t1)
+Adding (at p2 l1)
+Updating (total-cost) (12) by 1 increase
+
+Checking next happening (time 14)
+Deleting (in p0 t1)
+Adding (at p0 l1)
+Updating (total-cost) (13) by 1 increase
+
+Checking next happening (time 15)
+Deleting (at p0 l1)
+Adding (in p0 t0)
+Updating (total-cost) (14) by 1 increase
+
+Checking next happening (time 16)
+Deleting (at t0 l1)
+Deleting (fuel t0 level13)
+Adding (at t0 l0)
+Adding (fuel t0 level10)
+Updating (total-cost) (15) by 1 increase
+
+Checking next happening (time 17)
+Deleting (in p1 t0)
+Adding (at p1 l0)
+Updating (total-cost) (16) by 1 increase
+
+Checking next happening (time 18)
+Deleting (at t0 l0)
+Deleting (fuel t0 level10)
+Adding (at t0 l4)
+Adding (fuel t0 level8)
+Updating (total-cost) (17) by 1 increase
+
+Checking next happening (time 19)
+Deleting (in p0 t0)
+Adding (at p0 l4)
+Updating (total-cost) (18) by 1 increase
+
+Checking next happening (time 20)
+Deleting (at t0 l4)
+Deleting (fuel t0 level8)
+Adding (at t0 l0)
+Adding (fuel t0 level6)
+Updating (total-cost) (19) by 1 increase
+
+Checking next happening (time 21)
+Deleting (at t0 l0)
+Deleting (fuel t0 level6)
+Adding (at t0 l2)
+Adding (fuel t0 level3)
+Updating (total-cost) (20) by 1 increase
+Plan executed successfully - checking goal
+Plan valid
+Final value: 21
+
+Successful plans:
+Value: 21
+ /home/eifler/XPP/test/pp_ckeck/out//plan_567.sas 
+
