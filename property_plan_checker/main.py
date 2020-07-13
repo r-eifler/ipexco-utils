@@ -1,0 +1,61 @@
+#! /usr/bin/env python3
+
+from general.plan import Plan, PlanParser
+from general import ExplanationSetting
+from parser import parse
+import json
+
+import sys
+
+# global setting
+EXPSET = ExplanationSetting()
+
+
+def run(domain_path, problem_path, properties_path, task_schema_path, plan_path):
+
+        typeObjectMap = {}
+        json_task_schema = json.load(open(task_schema_path))
+        for o in json_task_schema['objects']:
+            if not o['type'] in typeObjectMap:
+                typeObjectMap[o['type']] = []
+
+            typeObjectMap[o['type']].append(o['name'])
+
+        # print("Schema parsed ...")
+
+        parse(properties_path, typeObjectMap, EXPSET)
+
+        # print("Properties parsed ...")
+        # print("#ASP: " + str(len(EXPSET.action_set_properties)))
+        # print("#LTLP: " + str(len(EXPSET.ltl_properties)))
+
+        planParser = PlanParser(domain_path, problem_path, plan_path, json_task_schema)
+        plan = planParser.run()
+        # plan.print()
+        # print("--------------------------------------------------")
+        # print("Properties parsed ...")
+        # print("#Steps: " + str(len(plan.steps)))
+
+        for prop in EXPSET.get_action_set_properties():
+            sat = prop.check(plan)
+            if sat:
+                print(prop.name)
+
+        for prop in EXPSET.get_ltl_properties():
+            sat = prop.check(plan)
+            if sat:
+                print(prop.name)
+
+        for prop in EXPSET.get_goal_properties():
+            sat = prop.check(plan)
+            if sat:
+                print(prop.name)
+
+
+domain_path = sys.argv[1]
+problem_path = sys.argv[2]
+properties_path = sys.argv[3]
+task_schema_path = sys.argv[4]
+plan_path = sys.argv[5]
+
+run(domain_path, problem_path, properties_path, task_schema_path, plan_path)
