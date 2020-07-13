@@ -9,23 +9,37 @@ def compute_plans(run_folder, task_schema, properties, MUGS, result_folder):
     plans = []
     all_property_names = [p['name'] for p in properties];
     solvable_subsets = MUGS.get_solvable_subsets(all_property_names)
+    # all solvable subsets with goal facts
+    # solvable_subsets = MUGS.get_solvable_subsets(all_property_names + task_schema['goal'])
     # print("Solvable Subset: ")
     # print(len(solvable_subsets))
+    if len(solvable_subsets) > 1000:
+        return []
 
+    num_plans = 0
     for sss_names in solvable_subsets:
-        sss_properties = list(filter(lambda x: x['name'] in sss_names, properties))
-        id = get_pp_set_id(sss_properties)
-        result_path = "/".join([result_folder, "plan_" + id + ".sas"])
+        # if num_plans % 10 == 0:
+        #     print(str(num_plans) + "/" + str(len(solvable_subsets)))
+        solvablesubsets_properties = list(filter(lambda x: x['name'] in sss_names, properties))
+        id_properties = get_pp_set_id(solvablesubsets_properties)
 
-        hardGoals = task_schema['goal'] + [p['name'] for p in sss_properties]
+        # solvablesubsets_goalfacts = list(filter(lambda x: x in sss_names, task_schema['goal']))
+        # id_goalfacts = get_goal_set_id(solvablesubsets_goalfacts, task_schema['goal'])
+
+        # result_path = "/".join([result_folder, "plan_" + id_properties + "-" + id_goalfacts + ".sas"])
+        result_path = "/".join([result_folder, "plan_" + id_properties + ".sas"])
+
+        # hardGoals = solvablesubsets_goalfacts + [p['name'] for p in solvablesubsets_properties]
+        hardGoals = [p['name'] for p in solvablesubsets_properties]
         # print(hardGoals)
         exp_setting = ExplanationSetting(
-            sss_properties,
+            solvablesubsets_properties,
             hardGoals,
             []
         )
         assert call_FD(run_folder, exp_setting, result_path), "No plan found!"
         plans.append((sss_names, result_path))
+        num_plans += 1
     return plans
 
 
@@ -65,3 +79,8 @@ def get_pp_set_id(s):
     l = list(s)
     l.sort(key=lambda x: x['id'])
     return ''.join([str(x['id']) for x in l])
+
+def get_goal_set_id(id_set, all_goal_facts):
+    all_goal_facts.sort()
+    l = list(id_set)
+    return ''.join([str(all_goal_facts.index(x)) for x in l])

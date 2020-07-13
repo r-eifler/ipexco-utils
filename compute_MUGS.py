@@ -6,9 +6,11 @@ from mugs import MUGS
 from settings import args_mugs_call, FD
 
 
-def compute_mugs(run_folder, task_schema, properties):
+def compute_mugs(run_folder, task_schema, properties, global_hardgoals):
 
-    exp_setting = ExplanationSetting(properties, task_schema['goal'], [p['name'] for p in properties])
+    soft_goals = [p['name'] for p in properties if p['name'] not in global_hardgoals]
+
+    exp_setting = ExplanationSetting(properties, global_hardgoals, soft_goals)
     call_FD(run_folder, exp_setting)
 
     mugs_path = run_folder + "/mugs.json"

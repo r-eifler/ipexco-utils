@@ -7,6 +7,7 @@ from compute_MUGS import compute_mugs
 from compute_plans import compute_plans
 from plan_properties import PlanProperties
 from settings import FD
+from hard_goals import parseHardGoals
 
 
 def propsPlanToJSON(item):
@@ -23,11 +24,13 @@ def toJSON(MUGS, plans, sat_props_per_plan, stream):
     print(MUGS.toJSON() + ",", file=stream)
 
     print("\"plans\": [", file=stream)
-    print(",\n".join([propsPlanToJSON(item) for item in plans]), file=stream)
+    if len(plans) > 0:
+        print(",\n".join([propsPlanToJSON(item) for item in plans]), file=stream)
     print("]\n,", file=stream)
 
     print("\"satPropertiesPerPlan\":[", file=stream)
-    print(",\n".join(propsPlanToJSON(item) for item in sat_props_per_plan), file=stream)
+    if len(sat_props_per_plan):
+        print(",\n".join(propsPlanToJSON(item) for item in sat_props_per_plan), file=stream)
     print("]\n", file=stream)
 
     print("}", file=stream)
@@ -46,16 +49,22 @@ def run(run_folder, domain_path, problem_path, task_schema_path, plan_properties
     task_schema = json.load(open(task_schema_path))
     # print("Task loaded ...")
 
+    global_hardgoals = parseHardGoals(plan_properties_path)
+
     planProperties = PlanProperties(plan_properties_path)
     # print("Properties loaded ...")
 
-    MUGS = compute_mugs(run_folder, task_schema, planProperties)
+    MUGS = compute_mugs(run_folder, task_schema, planProperties, global_hardgoals)
     # print("MUGS computed ...")
 
-    plans = compute_plans(run_folder, task_schema, planProperties, MUGS, result_folder)
-    # print("Plans computed ...")
+    plans = []
 
-    sat_props_per_plan = check_plan_properties(run_folder, plans, MUGS, planProperties, task_schema_path)
+    # plans = compute_plans(run_folder, task_schema, planProperties, MUGS, result_folder)
+    # # print("Plans computed ...")
+
+    sat_props_per_plan = []
+    # if len(plans) > 0:
+    #     sat_props_per_plan = check_plan_properties(run_folder, plans, MUGS, planProperties, task_schema_path)
     # print("sat_props_per_plan computed ...")
 
     toJSON(MUGS, plans, sat_props_per_plan, sys.stdout)
