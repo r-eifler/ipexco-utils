@@ -91,7 +91,6 @@ class Plan:
         return newPlan
 
     def __len__(self):
-        assert len(self.states) == len(self.satActionSets), str(len(self.states)) + " != " + str(len(self.satActionSets))
         return len(self.states)
 
 

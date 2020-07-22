@@ -22,6 +22,4 @@ def parse(path, typeObjectMap, EXPSET):
             EXPSET.add_goal_property(property)
         else:
             assert False, "Unknown property type: " + p_json['type']
-        for set in property.get_action_sets():
-            EXPSET.add_action_set(set)
 
