@@ -13,8 +13,8 @@ class GoalProperty(PlanProperty):
         new_property = GoalProperty(json['name'], formula)
         return new_property
 
-    def check(self, plan):
-        lastState = plan.last().states
+    def check(self, states):
+        lastState = states.last_elem()
         return self.formula in lastState
 
     def __eq__(self, other):

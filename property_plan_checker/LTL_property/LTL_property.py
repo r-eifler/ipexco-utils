@@ -1,6 +1,7 @@
 from general.property import PlanProperty
 from action_sets.action import ActionSet
 from logic.logic_formula import *
+from general.plan import Plan
 
 
 class LTLProperty(PlanProperty):
@@ -21,16 +22,19 @@ class LTLProperty(PlanProperty):
         return new_property
 
     def buildEnvironment(self, plan):
-        for i, step in enumerate(plan.states):
+        newPlan = Plan()
+        for action in plan.elems:
             for action_set in self.actionSets:
-                for action in step:
-                    if action_set.containsAction(action):
-                        plan.satActionSets[i].append(action_set.name)
-                        break
+                if action_set.containsAction(action):
+                    newPlan.add(action_set.name)
+        return newPlan
 
-    def check(self, plan):
-        self.buildEnvironment(plan)
-        return self.formula.evalLTL(plan)
+    def checkPlan(self, plan):
+        processedPlan = self.buildEnvironment(plan)
+        return self.formula.evalLTL(processedPlan)
+
+    def checkStates(self, states):
+        return self.formula.evalLTL(states)
 
     def __repr__(self):
         s = self.name + ":\n\t" + str(self.formula)

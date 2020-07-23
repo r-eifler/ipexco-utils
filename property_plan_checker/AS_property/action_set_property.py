@@ -47,7 +47,7 @@ class ActionSetProperty(PlanProperty):
     def buildEnvironment(self, plan):
         env = []
         for action_set in self.actionSets:
-            for action in plan.actions:
+            for action in plan.elems:
                 if action_set.containsAction(action):
                     env.append(action_set.name)
                     break

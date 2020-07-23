@@ -10,6 +10,20 @@ class PlanProperty:
         # id of the sat variable in the SAS encoding
         self.var_id = None
 
+    def vars_only_action_sets(self):
+        for c in self.constants:
+            if c not in [s.name for s in self.actionSets]:
+                return False
+        return True
+
+    def vars_only_facts(self):
+        for c in self.constants:
+            if c in [s.name for s in self.actionSets]:
+                return False
+        return True
+
+
+
     def add_action_set(self, s):
         self.actionSets.append(s)
 

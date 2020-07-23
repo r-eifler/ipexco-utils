@@ -122,7 +122,7 @@ class LConstant(Operator):
         return self.name in env
 
     def evalLTL(self, plan):
-        return self.name in plan.next_step()
+        return self.name in plan.first_elem()
 
     def toDNF(self):
         return LConstant(self.name, self.id)
@@ -442,7 +442,7 @@ class OpNext(Operator):
 
     def evalLTL(self, plan):
         tail = plan.tail()
-        return len(tail) > 0 and self.operand.evalLTL(plan.tail())
+        return len(tail) > 0 and self.operand.evalLTL(tail)
 
     def replaceConstantsName(self, map):
         return OpNext(self.operand.replaceConstantsName(map))
@@ -474,8 +474,10 @@ class OpUntil(Operator):
             return self.right.evalLTL(plan)
         head = plan.head()
         tail = plan.tail()
-        return self.right.evalLTL(plan.head()) or \
-               (self.left.evalLTL(head) and (len(tail) > 0 and self.evalLTL(tail)))
+        evalrighthead = self.right.evalLTL(head)
+        evallefthead = self.left.evalLTL(head)
+        evaltail = len(tail) > 0 and self.evalLTL(tail)
+        return evalrighthead or (evallefthead and evaltail)
 
     def replaceConstantsName(self, map):
         return OpUntil(self.left.replaceConstantsName(map), self.right.replaceConstantsName(map))
@@ -506,7 +508,7 @@ class OpWeakUntil(Operator):
     def evalLTL(self, plan):
         head = plan.head()
         tail = plan.tail()
-        return self.right.eval(plan.head()) or \
+        return self.right.eval(plan.head) or \
                (self.left.evalLTL(head) and (len(tail) > 0 and self.evalLTL(tail)))
 
     def replaceConstantsName(self, map):

@@ -30,24 +30,30 @@ def run(domain_path, problem_path, properties_path, task_schema_path, plan_path)
         # print("#LTLP: " + str(len(EXPSET.ltl_properties)))
 
         planParser = PlanParser(domain_path, problem_path, plan_path, json_task_schema)
-        plan = planParser.run()
+        actions, states = planParser.run()
         # plan.print()
         # print("--------------------------------------------------")
         # print("Properties parsed ...")
         # print("#Steps: " + str(len(plan.steps)))
 
         for prop in EXPSET.get_action_set_properties():
-            sat = prop.check(plan)
+            sat = prop.check(actions)
             if sat:
                 print(prop.name)
 
         for prop in EXPSET.get_ltl_properties():
-            sat = prop.check(plan)
+            if prop.vars_only_action_sets():
+                sat = prop.checkPlan(actions)
+            else:
+                if prop.vars_only_facts():
+                    sat = prop.checkStates(states)
+                else:
+                    assert False, 'You can not used facts and action sets in the same planProperty'
             if sat:
                 print(prop.name)
 
         for prop in EXPSET.get_goal_properties():
-            sat = prop.check(plan)
+            sat = prop.check(states)
             if sat:
                 print(prop.name)
 

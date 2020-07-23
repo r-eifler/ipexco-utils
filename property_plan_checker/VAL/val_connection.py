@@ -22,9 +22,9 @@ class VALConnection:
 
         state_changes, cost = self.get_state_changes(plan_path)
 
-        plan.states.append(initial_state)
+        plan.add(initial_state)
         for change in state_changes:
-            next_state = plan.states[-1].copy()
+            next_state = plan.elems[-1].copy()
             # print("Current state:")
             # print(next_state)
             # print("DELETE")
@@ -32,12 +32,16 @@ class VALConnection:
             # print("ADD")
             # print(change.adds)
             for d in change.deletes:
+                if d.startswith('sum') or d.startswith('connected') or d.startswith('fuelcost'):
+                    continue
                 next_state.remove(d)
             for a in change.adds:
+                if a.startswith('sum') or a.startswith('connected') or a.startswith('fuelcost'):
+                    continue
                 next_state.append(a)
 
             #print(next_state)
-            plan.states.append(next_state)
+            plan.add(next_state)
 
     def get_initial_state(self):
 
@@ -60,7 +64,8 @@ class VALConnection:
             line = line.strip()
             fact_parts = line.replace("(", "").replace(")", "").split(" ")
             predicate = fact_parts[0]
-
+            if predicate in ['sum', 'connected', 'fuelcost']:
+                continue
             initial_state.append(fact_parts[0] + "(" + ",".join(fact_parts[1:]) + ")")
 
         #print(initial_state)
