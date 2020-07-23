@@ -2,7 +2,7 @@ import os
 import os.path
 
 from exp_setting import ExplanationSetting
-from settings import args_optimal_call, FD
+from settings import args_optimal_call, FD, FD_script_name
 
 
 def compute_plans(run_folder, task_schema, properties, MUGS, result_folder):
@@ -57,7 +57,7 @@ def call_FD(run_folder, exp_setting, result_path):
 
     cmd = " ".join([
         "python3",
-        FD,
+        FD + "/" + FD_script_name,
         run_folder,
         "--build", "release64",
         "/".join([run_folder, "domain.pddl"]),

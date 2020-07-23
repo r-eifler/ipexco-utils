@@ -3,7 +3,7 @@ import json
 
 from exp_setting import ExplanationSetting
 from mugs import MUGS
-from settings import args_mugs_call, FD
+from settings import args_mugs_call, FD, FD_script_name
 
 
 def compute_mugs(run_folder, task_schema, properties, global_hardgoals):
@@ -31,7 +31,7 @@ def call_FD(run_folder, exp_setting):
 
     cmd = " ".join([
         "python3",
-        FD,
+        FD + "/" + FD_script_name,
         run_folder,
         "--build", "release64",
         "/".join([run_folder, "domain.pddl"]),
