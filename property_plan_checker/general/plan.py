@@ -66,7 +66,7 @@ class Plan:
         return self.elems[0]
 
     def head(self):
-        assert (len(self.elems) > 1)
+        assert (len(self.elems) >= 1)
         newPlan = Plan()
         newPlan.elems = [self.elems[0]]
         return newPlan
