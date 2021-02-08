@@ -1,4 +1,4 @@
-from ..settings import VAL_temp, VAL, ignore_predicates
+from settings import VAL_temp, VAL, ignore_predicates
 import os
 import copy
 
@@ -84,9 +84,10 @@ class VALConnection:
 
         state_changes = []
         cost = None
+        assert len(lines) > 0, cmd
         line = lines.pop(0)
         while not line.startswith("-----------"):
-            assert(len(lines) > 0)
+            assert len(lines) > 0, cmd
             line = lines.pop(0)
 
         while len(lines) > 0:

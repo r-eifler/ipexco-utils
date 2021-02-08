@@ -1,4 +1,4 @@
-from ..logic import logic_formula as logic_formula
+from logic import logic_formula as logic_formula
 from .LTL_property import LTLProperty
 
 def parse_LTL_property(lines):

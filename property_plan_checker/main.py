@@ -1,8 +1,8 @@
 #! /usr/bin/env python3
 
-from .general.plan import Plan, PlanParser
-from .general import ExplanationSetting
-from .parser import parse
+from general.plan import Plan, PlanParser
+from general import ExplanationSetting
+from parser import parse
 import json
 
 import sys
@@ -20,8 +20,8 @@ def run(domain_path, problem_path, properties_paths, task_schema_path, plan_path
 
 	# print("Schema parsed ...")
 
-	for properties_path in properties_paths:
-		parse(properties_path, typeObjectMap, EXPSET)
+	#for properties_path in properties_paths:
+	parse(properties_paths, typeObjectMap, EXPSET)
 
 	# print("Properties parsed ...")
 	# print("#ASP: " + str(len(EXPSET.action_set_properties)))
@@ -74,4 +74,4 @@ if __name__ == "__main__":
 	task_schema_path = sys.argv[4]
 	plan_path = sys.argv[5]
 
-	run(domain_path, problem_path, properties_path, task_schema_path, plan_path, print_res)
+	run(domain_path, problem_path, properties_path, task_schema_path, plan_path, print_res=True)

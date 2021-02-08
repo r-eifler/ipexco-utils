@@ -1,4 +1,4 @@
-from ..general.property import PlanProperty
+from general.property import PlanProperty
 
 
 class GoalProperty(PlanProperty):

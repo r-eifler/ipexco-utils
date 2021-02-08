@@ -1,8 +1,8 @@
 import json
 
-from .AS_property.action_set_property import ActionSetProperty
-from .G_property.goal_property import GoalProperty
-from .LTL_property.LTL_property import LTLProperty
+from AS_property.action_set_property import ActionSetProperty
+from G_property.goal_property import GoalProperty
+from LTL_property.LTL_property import LTLProperty
 
 # typeObjectMap maps from a type to a list of objects which have this type
 def parse(path, typeObjectMap, EXPSET):

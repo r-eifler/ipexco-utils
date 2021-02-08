@@ -1,6 +1,6 @@
 from typing import List
 
-from  ..VAL.val_connection import VALConnection
+from VAL.val_connection import VALConnection
 
 
 class PlanParser:
@@ -23,7 +23,7 @@ class PlanParser:
                 break
             action_line = line.replace('(', '').replace(')', '').replace("\n", '')
             action_parts = action_line.split(' ')
-            action_name =  action_parts[0]
+            action_name = action_parts[0]
             if action_name in self.original_task_actions_names:
                 original_task_actions.append(line)
                 plan.add(action_line)

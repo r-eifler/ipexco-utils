@@ -1,6 +1,6 @@
-from ..logic.logic_formula import *
-from ..general.property import PlanProperty
-from ..action_sets.action import ActionSet
+from logic.logic_formula import *
+from general.property import PlanProperty
+from action_sets.action import ActionSet
 
 
 class ActionSetProperty(PlanProperty):

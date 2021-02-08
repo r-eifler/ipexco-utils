@@ -1,7 +1,7 @@
-from ..general.property import PlanProperty
-from ..action_sets.action import ActionSet
-from ..logic.logic_formula import *
-from ..general.plan import Plan
+from general.property import PlanProperty
+from action_sets.action import ActionSet
+from logic.logic_formula import *
+from general.plan import Plan
 
 
 class LTLProperty(PlanProperty):
