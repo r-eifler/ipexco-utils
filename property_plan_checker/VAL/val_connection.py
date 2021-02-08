@@ -1,4 +1,4 @@
-from settings import VAL_temp, VAL
+from ..settings import VAL_temp, VAL, ignore_predicates
 import os
 import copy
 
@@ -32,11 +32,11 @@ class VALConnection:
             # print("ADD")
             # print(change.adds)
             for d in change.deletes:
-                if d.startswith('sum') or d.startswith('connected') or d.startswith('fuelcost'):
+                if d.split("(")[0] in ignore_predicates:
                     continue
                 next_state.remove(d)
             for a in change.adds:
-                if a.startswith('sum') or a.startswith('connected') or a.startswith('fuelcost'):
+                if a.split("(")[0] in ignore_predicates:
                     continue
                 next_state.append(a)
 
@@ -64,7 +64,7 @@ class VALConnection:
             line = line.strip()
             fact_parts = line.replace("(", "").replace(")", "").split(" ")
             predicate = fact_parts[0]
-            if predicate in ['sum', 'connected', 'fuelcost']:
+            if predicate in ignore_predicates:
                 continue
             initial_state.append(fact_parts[0] + "(" + ",".join(fact_parts[1:]) + ")")
 

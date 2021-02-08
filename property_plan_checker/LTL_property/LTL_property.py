@@ -1,7 +1,7 @@
-from general.property import PlanProperty
-from action_sets.action import ActionSet
-from logic.logic_formula import *
-from general.plan import Plan
+from ..general.property import PlanProperty
+from ..action_sets.action import ActionSet
+from ..logic.logic_formula import *
+from ..general.plan import Plan
 
 
 class LTLProperty(PlanProperty):
@@ -16,6 +16,7 @@ class LTLProperty(PlanProperty):
     @staticmethod
     def fromJSON(json, typeObjectMap):
         (formula, rest, constants) = parseFormula(json['formula'])
+        assert len(rest) == 0, json['formula'] + " " + str(rest)
         new_property = LTLProperty(json['name'], formula, constants)
         for actionSets_json in json['actionSets']:
             new_property.add_action_set(ActionSet.fromJSON(actionSets_json, typeObjectMap, True))

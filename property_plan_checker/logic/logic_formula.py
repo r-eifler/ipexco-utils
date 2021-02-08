@@ -87,6 +87,8 @@ class Operator:
             return LOr.parse(parts)
         elif parts[0] == "&&": 
             return LAnd.parse(parts)
+        elif parts[0] == "->":
+            return LImplies.parse(parts)
 
         elif parts[0] == "<>" or parts[0] == "F":
             return OpSometimes.parse(parts)
@@ -373,6 +375,57 @@ class LOr(Operator):
         return "(" + self.left.SAS_repr(actionSets) + " || " + self.right.SAS_repr(actionSets) + ")"
 
 
+class LImplies(Operator):
+    @staticmethod
+    def parse(parts):
+        operatorString = parts.pop(0)
+        assert (operatorString == "->")
+        (operand_left, rest1, constants1) = Operator.parse(parts)
+        (operand_right, rest2, constants2) = Operator.parse(rest1)
+
+        return (LOr(operand_left, operand_right), rest2, constants1 + constants2)
+
+    def __init__(self, left, right):
+        self.left = left
+        self.right = right
+
+    def evalAS(self, env):
+        return not self.left.evalAS(env) or self.right.evalAS(env)
+
+    def evalLTL(self, plan):
+        return not self.left.evalLTL(plan) or self.right.evalLTL(plan)
+
+    def getClauses(self, clauses):
+        assert False, "not implemented"
+
+    def negate(self):
+        left = self.left
+        right = self.right.negate()
+
+        return LAnd(left, right)
+
+    def distribute(self):
+        assert False, "not implemented"
+
+    def toDNF(self):
+        assert False, "not implemented"
+
+    def addPostfix(self, fix):
+        return LImplies(self.left.addPostfix(fix), self.right.addPostfix(fix))
+
+    def toPrefixForm(self):
+        return " -> " + self.left.toPrefixForm() + " " + self.right.toPrefixForm()
+
+    def replaceConstantsName(self, map):
+        return LImplies(self.left.replaceConstantsName(map), self.right.replaceConstantsName(map))
+
+    def __repr__(self):
+        return "(" + str(self.left) + " -> " + str(self.right) + ")"
+
+    def SAS_repr(self, actionSets):
+        return "(" + self.left.SAS_repr(actionSets) + " -> " + self.right.SAS_repr(actionSets) + ")"
+
+
 class OpSometimes(Operator):
 
     @staticmethod
@@ -388,7 +441,7 @@ class OpSometimes(Operator):
 
     def evalLTL(self, plan):
         tail = plan.tail()
-        return self.operand.evalLTL(plan.head()) or (len(tail) > 0 and self.operand.evalLTL(tail))
+        return self.operand.evalLTL(plan.head()) or (len(tail) > 0 and self.evalLTL(tail))
 
     def replaceConstantsName(self, map):
         return OpSometimes(self.operand.replaceConstantsName(map))
@@ -414,8 +467,9 @@ class OpAlways(Operator):
         self.operand = operand
 
     def evalLTL(self, plan):
+        head = plan.head()
         tail = plan.tail()
-        return self.operand.evalLTL(plan.head()) and (len(tail) == 0 or self.operand.evalLTL(tail))
+        return self.operand.evalLTL(head) and (len(tail) == 0 or self.evalLTL(tail))
 
     def replaceConstantsName(self, map):
         return OpAlways(self.operand.replaceConstantsName(map))
@@ -475,9 +529,11 @@ class OpUntil(Operator):
         head = plan.head()
         tail = plan.tail()
         evalrighthead = self.right.evalLTL(head)
+        if evalrighthead:
+            return True
         evallefthead = self.left.evalLTL(head)
         evaltail = len(tail) > 0 and self.evalLTL(tail)
-        return evalrighthead or (evallefthead and evaltail)
+        return (evallefthead and evaltail)
 
     def replaceConstantsName(self, map):
         return OpUntil(self.left.replaceConstantsName(map), self.right.replaceConstantsName(map))
@@ -506,10 +562,16 @@ class OpWeakUntil(Operator):
         self.right = right
 
     def evalLTL(self, plan):
+        if len(plan) == 1:
+            return self.left.evalLTL(plan)
         head = plan.head()
         tail = plan.tail()
-        return self.right.eval(plan.head) or \
-               (self.left.evalLTL(head) and (len(tail) > 0 and self.evalLTL(tail)))
+        evalrighthead = self.right.evalLTL(head)
+        if evalrighthead:
+            return True
+        evallefthead = self.left.evalLTL(head)
+        evaltail = len(tail) > 0 and self.evalLTL(tail)
+        return (evallefthead and evaltail)
 
     def replaceConstantsName(self, map):
         return OpWeakUntil(self.left.replaceConstantsName(map), self.right.replaceConstantsName(map))

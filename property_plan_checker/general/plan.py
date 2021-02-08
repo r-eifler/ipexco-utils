@@ -1,6 +1,6 @@
 from typing import List
 
-from VAL.val_connection import VALConnection
+from  ..VAL.val_connection import VALConnection
 
 
 class PlanParser:

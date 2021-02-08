@@ -1,6 +1,6 @@
-from logic.logic_formula import *
-from general.property import PlanProperty
-from action_sets.action import ActionSet
+from ..logic.logic_formula import *
+from ..general.property import PlanProperty
+from ..action_sets.action import ActionSet
 
 
 class ActionSetProperty(PlanProperty):
@@ -39,6 +39,7 @@ class ActionSetProperty(PlanProperty):
     @staticmethod
     def fromJSON(json, typeObjectMap):
         (formula, rest, constants) = parseFormula(json['formula'])
+        assert len(rest) == 0, json['formula'] + " " + str(rest)
         new_property = ActionSetProperty(json['name'], formula, constants)
         for actionSets_json in json['actionSets']:
             new_property.add_action_set(ActionSet.fromJSON(actionSets_json, typeObjectMap, False))
