@@ -39,7 +39,7 @@ def run(plan_properties_path, MUGS_path):
 
     print('{')
     print('\"selectedPlanProperties\": [' + ','.join(['\"' + pp + '\"' for pp in selected_PP]) + '],')
-    print('\"maxUtility\": ' + str(max_utility))
+    print('\"value\": ' + str(max_utility))
     print('}')
 
 
