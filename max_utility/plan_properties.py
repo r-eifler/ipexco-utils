@@ -8,5 +8,5 @@ class PlanProperties(list):
         file = open(plan_properties_path)
         jsonObject = json.load(file)
         file.close()
-        for p in jsonObject:
+        for p in jsonObject["plan_properties"]:
             self.append(p)

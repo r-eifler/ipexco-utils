@@ -25,4 +25,4 @@ class MUGS(list):
                         renamed.append(pp['name'])
                         break
 
-                self.append(renamed)
+            self.append(renamed)
