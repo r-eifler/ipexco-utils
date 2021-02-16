@@ -1,0 +1,32 @@
+{
+"MUGS":
+[
+	["Atom at(p1, l1)", "sameTruckp1p4", "notusel1l3witht1", "soft_accepting(visitel3witht2)"],
+	["Atom at(p3, l2)", "notusel2l3witht1", "sameTruckp1p4", "soft_accepting(p0l5beforep1l1)"],
+	["Atom at(p3, l2)", "Atom at(p1, l1)", "sameTruckp1p4", "notusel1l3witht1"],
+	["sameTruckp1p4", "soft_accepting(visitel3witht2)", "soft_accepting(p0l5beforep1l1)"],
+	["usel0l1witht2", "soft_accepting(visitel3witht2)", "soft_accepting(p0l5beforep1l1)"],
+	["Atom at(p3, l2)", "sameTruckp1p4", "notusel1l3witht1", "soft_accepting(p0l5beforep1l1)"],
+	["Atom at(p4, l0)", "Atom at(p2, l5)"],
+	["Atom at(p4, l0)", "usel0l1witht2"],
+	["Atom at(p1, l1)", "usel0l1witht2", "notusel1l3witht1", "soft_accepting(visitel3witht2)"],
+	["Atom at(p4, l0)", "sameTruckp0p2"],
+	["Atom at(p3, l2)", "usel0l1witht2", "sameTruckp0p2"],
+	["Atom at(p4, l0)", "sameTruckp1p4"],
+	["usel0l1witht2", "sameTruckp1p4", "soft_accepting(visitel3witht2)"],
+	["Atom at(p4, l0)", "soft_accepting(visitel3witht2)"],
+	["Atom at(p3, l2)", "usel0l1witht2", "soft_accepting(visitel3witht2)"],
+	["Atom at(p4, l0)", "soft_accepting(p0l5beforep1l1)"],
+	["Atom at(p4, l0)", "soft_accepting(p0l5beforep2l5)"],
+	["Atom at(p4, l0)", "Atom at(p1, l1)", "notusel1l3witht1"],
+	["Atom at(p3, l2)", "notusel2l3witht1", "usel0l1witht2"],
+	["Atom at(p3, l2)", "sameTruckp0p2", "sameTruckp1p4", "soft_accepting(p0l5beforep1l1)"],
+	["Atom at(p3, l2)", "usel0l1witht2", "notusel1l3witht1"]
+],
+"plans": [
+]
+,
+"satPropertiesPerPlan":[
+]
+
+}
