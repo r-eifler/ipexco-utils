@@ -17,6 +17,18 @@ def run(plan_properties_path, MUGS_path):
 
     constraints = MUGS(plan_properties, MUGS_path)
 
+    if len(constraints) == 0:
+        max_utility = 0
+        for i, r in enumerate(plan_properties):
+            max_utility += utilities[i]
+
+        print('{')
+        #print('\"selectedPlanProperties\": [' + ','.join(['\"' + pp + '\"' for pp in plan_properties]) + '],')
+        print('\"value\": ' + str(max_utility))
+        print('}')
+        return
+
+
     # print(vars)
     # print(utilities)
     # print(constraints)
