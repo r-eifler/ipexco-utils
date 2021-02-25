@@ -37,10 +37,10 @@ def call_FD(run_folder, exp_setting):
         "/".join([run_folder, "domain.pddl"]),
         "/".join([run_folder, "problem.pddl"]),
         "/".join([run_folder, "exp_setting.pddl"]),
-        '--translate-options',
-        '--keep-unreachable-facts',
-        '--keep-unimportant-variables',
-        '--search-options',
+        #'--translate-options',
+        #'--keep-unreachable-facts',
+        #'--keep-unimportant-variables',
+        #'--search-options',
         " ".join(args_mugs_call),
         " > /dev/null"])
     os.system(cmd)
