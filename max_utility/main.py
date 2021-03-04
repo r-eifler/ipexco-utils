@@ -10,10 +10,12 @@ def run(plan_properties_path, MUGS_path):
 
     vars = []
     utilities = []
+    utility_map = {}
     for pp in plan_properties:
         #if not pp['globalHardGoal']:
         vars.append(pp['name'])
         utilities.append(pp['value'])
+        utility_map[pp['name']] = pp['value']
 
     constraints = MUGS(plan_properties, MUGS_path)
 
@@ -39,7 +41,13 @@ def run(plan_properties_path, MUGS_path):
     linProg = LinearProgram(vars, utilities, constraints)
     selected_PP = linProg.compute()
 
-    max_utility = sum(utilities[i] for i, p in enumerate(selected_PP))
+    max_utility = sum(utility_map[p] for p in selected_PP)
+
+    # for p, u in zip(vars, utilities):
+    #     if p in selected_PP:
+    #         print('1: ' + p + ' ' + str(u))
+    #     else:
+    #         print('0: ' + p + ' ' + str(u))
 
     # pip3 install mip
 

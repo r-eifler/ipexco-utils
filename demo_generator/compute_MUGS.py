@@ -34,7 +34,7 @@ def call_FD(run_folder, exp_setting):
         FD + "/" + FD_script_name,
         run_folder,
         "--build", "release64",
-        "--overall-memory-limit", "2G",
+        "--overall-memory-limit", "8G",
         "/".join([run_folder, "domain.pddl"]),
         "/".join([run_folder, "problem.pddl"]),
         "/".join([run_folder, "exp_setting.pddl"]),
