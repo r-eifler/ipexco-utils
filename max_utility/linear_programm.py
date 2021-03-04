@@ -28,12 +28,12 @@ class LinearProgram:
 
         # print('coefficients')
         # print(coefficients)
-        # print('MUGS/Constraints')
-        # print(A)
+        print('MUGS/Constraints')
+        print(A)
         # print("MUGS Size")
         # print(b)
 
         res = linprog(coefficients, A_ub=A, b_ub=b, bounds=bounds, method='revised simplex')
-        # print(res)
+        print(res)
 
         return res.x

@@ -2,7 +2,7 @@ import sys
 
 from plan_properties import PlanProperties
 from MUGS import MUGS
-from linear_programm import LinearProgram
+from mixed_integer_linear_programm import LinearProgram
 
 def run(plan_properties_path, MUGS_path):
 
@@ -37,17 +37,11 @@ def run(plan_properties_path, MUGS_path):
     # print("Num constraints: " + str(len(constraints)))
 
     linProg = LinearProgram(vars, utilities, constraints)
-    used_pp = linProg.compute()
+    selected_PP = linProg.compute()
 
-    max_utility = 0
-    selected_PP = []
-    for i, r in enumerate(used_pp):
-        if r > 0:
-            # print(vars[i])
-            selected_PP.append(vars[i])
-            max_utility += utilities[i]
+    max_utility = sum(utilities[i] for i, p in enumerate(selected_PP))
 
-    selected_PP.sort()
+    # pip3 install mip
 
     print('{')
     print('\"selectedPlanProperties\": [' + ','.join(['\"' + pp + '\"' for pp in selected_PP]) + '],')
