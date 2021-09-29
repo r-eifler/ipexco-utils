@@ -11,11 +11,16 @@ def run(plan_properties_path, MUGS_path):
     vars = []
     utilities = []
     utility_map = {}
+    hard_goals_utility = 0
+    hard_goals = []
     for pp in plan_properties:
         #if not pp['globalHardGoal']:
         vars.append(pp['name'])
         utilities.append(pp['value'])
         utility_map[pp['name']] = pp['value']
+        # else:
+        #     hard_goals.append(pp)
+        #     hard_goals_utility += pp['value']
 
     constraints = MUGS(plan_properties, MUGS_path)
 
@@ -33,7 +38,7 @@ def run(plan_properties_path, MUGS_path):
 
     # print(vars)
     # print(utilities)
-    # print(constraints)
+    #print(constraints)
 
     # print("Num vars: " + str(len(vars)))
     # print("Num constraints: " + str(len(constraints)))
@@ -42,6 +47,8 @@ def run(plan_properties_path, MUGS_path):
     selected_PP = linProg.compute()
 
     max_utility = sum(utility_map[p] for p in selected_PP)
+    #max_utility += hard_goals_utility
+    #selected_PP += hard_goals
 
     # for p, u in zip(vars, utilities):
     #     if p in selected_PP:

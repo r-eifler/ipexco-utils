@@ -34,6 +34,7 @@ class VALConnection:
             for d in change.deletes:
                 if d.split("(")[0] in ignore_predicates:
                     continue
+                assert d in next_state, "ERROR: " + d + " not in state: " + str(next_state)
                 next_state.remove(d)
             for a in change.adds:
                 if a.split("(")[0] in ignore_predicates:
