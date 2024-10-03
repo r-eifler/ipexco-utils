@@ -89,6 +89,8 @@ class Operator:
             return LAnd.parse(parts)
         elif parts[0] == "->":
             return LImplies.parse(parts)
+        elif parts[0] == "<->":
+            return LEquivalenc.parse(parts)
 
         elif parts[0] == "<>" or parts[0] == "F":
             return OpSometimes.parse(parts)
@@ -383,7 +385,7 @@ class LImplies(Operator):
         (operand_left, rest1, constants1) = Operator.parse(parts)
         (operand_right, rest2, constants2) = Operator.parse(rest1)
 
-        return (LOr(operand_left, operand_right), rest2, constants1 + constants2)
+        return (LImplies(operand_left, operand_right), rest2, constants1 + constants2)
 
     def __init__(self, left, right):
         self.left = left
@@ -424,6 +426,57 @@ class LImplies(Operator):
 
     def SAS_repr(self, actionSets):
         return "(" + self.left.SAS_repr(actionSets) + " -> " + self.right.SAS_repr(actionSets) + ")"
+    
+
+class LEquivalenc(Operator):
+    @staticmethod
+    def parse(parts):
+        operatorString = parts.pop(0)
+        assert (operatorString == "<->")
+        (operand_left, rest1, constants1) = Operator.parse(parts)
+        (operand_right, rest2, constants2) = Operator.parse(rest1)
+
+        return (LEquivalenc(operand_left, operand_right), rest2, constants1 + constants2)
+
+    def __init__(self, left, right):
+        self.left = left
+        self.right = right
+
+    def evalAS(self, env):
+        return self.left.evalAS(env) == self.right.evalAS(env)
+
+    def evalLTL(self, plan):
+        return self.left.evalLTL(plan) == self.right.evalLTL(plan)
+
+    def getClauses(self, clauses):
+        assert False, "not implemented"
+
+    def negate(self):
+        left = self.left
+        right = self.right
+
+        return LOr(LAnd(left, LNot(right)),LAnd(LNot(left), right))
+
+    def distribute(self):
+        assert False, "not implemented"
+
+    def toDNF(self):
+        assert False, "not implemented"
+
+    def addPostfix(self, fix):
+        return LEquivalenc(self.left.addPostfix(fix), self.right.addPostfix(fix))
+
+    def toPrefixForm(self):
+        return " <-> " + self.left.toPrefixForm() + " " + self.right.toPrefixForm()
+
+    def replaceConstantsName(self, map):
+        return LEquivalenc(self.left.replaceConstantsName(map), self.right.replaceConstantsName(map))
+
+    def __repr__(self):
+        return "(" + str(self.left) + " <-> " + str(self.right) + ")"
+
+    def SAS_repr(self, actionSets):
+        return "(" + self.left.SAS_repr(actionSets) + " <-> " + self.right.SAS_repr(actionSets) + ")"
 
 
 class OpSometimes(Operator):

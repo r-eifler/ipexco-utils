@@ -20,8 +20,8 @@ def run(domain_path, problem_path, properties_paths, task_schema_path, plan_path
 
 	# print("Schema parsed ...")
 
-	#for properties_path in properties_paths:
-	parse(properties_paths, typeObjectMap, EXPSET)
+	for properties_path in properties_paths:
+		parse(properties_path, typeObjectMap, EXPSET)
 
 	# print("Properties parsed ...")
 	# print("#ASP: " + str(len(EXPSET.action_set_properties)))
@@ -29,6 +29,8 @@ def run(domain_path, problem_path, properties_paths, task_schema_path, plan_path
 
 	planParser = PlanParser(domain_path, problem_path, plan_path, json_task_schema)
 	actions, states = planParser.run()
+	if not actions or not states:
+		return None
 	# plan.print()
 	# print("--------------------------------------------------")
 	# print("Properties parsed ...")

@@ -21,6 +21,8 @@ class VALConnection:
         initial_state = self.get_initial_state()
 
         state_changes, cost = self.get_state_changes(plan_path)
+        if not state_changes:
+            return 
 
         plan.add(initial_state)
         for change in state_changes:
@@ -34,8 +36,9 @@ class VALConnection:
             for d in change.deletes:
                 if d.split("(")[0] in ignore_predicates:
                     continue
-                assert d in next_state, "ERROR: " + d + " not in state: " + str(next_state)
-                next_state.remove(d)
+                # assert d in next_state, "ERROR: " + d + " not in state: " + str(next_state)
+                if d in next_state:
+                    next_state.remove(d)
             for a in change.adds:
                 if a.split("(")[0] in ignore_predicates:
                     continue
@@ -88,7 +91,10 @@ class VALConnection:
         assert len(lines) > 0, cmd
         line = lines.pop(0)
         while not line.startswith("-----------"):
-            assert len(lines) > 0, cmd
+            if len(lines) == 0:
+                print(cmd)
+                return None, None
+            # assert len(lines) > 0, cmd
             line = lines.pop(0)
 
         while len(lines) > 0:

@@ -7,6 +7,7 @@ from LTL_property.LTL_property import LTLProperty
 # typeObjectMap maps from a type to a list of objects which have this type
 def parse(path, typeObjectMap, EXPSET):
 
+    # print(path)
     with open(path, encoding='utf-8') as fh:
         json_encoding = json.load(fh)
 
