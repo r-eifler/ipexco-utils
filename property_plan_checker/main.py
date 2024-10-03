@@ -7,7 +7,7 @@ import json
 
 import sys
 
-def run(domain_path, problem_path, properties_paths, task_schema_path, plan_path, print_res=False):
+def run(domain_path, problem_path, properties_path, task_schema_path, plan_path, print_res=False):
 	EXPSET = ExplanationSetting()
 
 	typeObjectMap = {}
@@ -20,8 +20,8 @@ def run(domain_path, problem_path, properties_paths, task_schema_path, plan_path
 
 	# print("Schema parsed ...")
 
-	for properties_path in properties_paths:
-		parse(properties_path, typeObjectMap, EXPSET)
+	# for properties_path in properties_paths:
+	parse(properties_path, typeObjectMap, EXPSET)
 
 	# print("Properties parsed ...")
 	# print("#ASP: " + str(len(EXPSET.action_set_properties)))

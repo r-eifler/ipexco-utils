@@ -78,6 +78,7 @@ class VALConnection:
     def get_state_changes(self, plan_sas_file):
 
         cmd = VAL + " " + self.domain + " " + self.problem + " " + plan_sas_file + " > " + VAL_temp
+        # print(cmd)
         os.system(cmd)
 
         # parse deletes and adds

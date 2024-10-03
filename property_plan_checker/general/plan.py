@@ -1,4 +1,5 @@
 from typing import List
+import json
 
 from VAL.val_connection import VALConnection
 
@@ -15,23 +16,19 @@ class PlanParser:
         original_task_actions = []
 
         # parse actions
-        fileIn = open(self.plan_path, 'rt')
-        plan = Plan()
-        for line in fileIn.readlines():
-            if line.startswith(";"):
-                original_task_actions.append(line)  # action cost line
-                break
-            action_line = line.replace('(', '').replace(')', '').replace("\n", '')
-            action_parts = action_line.split(' ')
-            action_name = action_parts[0]
-            if action_name in self.original_task_actions_names:
-                original_task_actions.append(line)
-                plan.add(action_line)
+        
+        with open(self.plan_path) as fp:
+            actions = json.load(fp)
 
-        fileIn.close()
+        plan = Plan()
+        for a in actions:
+            plan.add(a)
+            original_task_actions.append( '(' + a['name'] + ' ' + ' '.join(a['arguments']) + ')\n')
+
+        self.sas_plan_path = self.plan_path.replace('.json', '_sas')
 
         # write plan file with only original actions for VAL
-        fileOut = open(self.plan_path, 'wt')
+        fileOut = open(self.sas_plan_path, 'wt')
         fileOut.writelines(original_task_actions)
         fileOut.close()
 
@@ -39,7 +36,7 @@ class PlanParser:
         # print("Get facts from VAL")
         states = Plan()
         valConnection = VALConnection(self.domain, self.problem)
-        valConnection.add_states(self.plan_path, states)
+        valConnection.add_states(self.sas_plan_path, states)
 
         return plan, states
 
