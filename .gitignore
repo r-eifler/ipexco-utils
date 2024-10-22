@@ -2,3 +2,7 @@
 *.cpython-36.pyc
 __pycache__/
 .idea
+.vscode*
+test_openai_api.py
+.venv
+alice*
