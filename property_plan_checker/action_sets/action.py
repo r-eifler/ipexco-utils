@@ -89,9 +89,10 @@ class ActionSet:
 
 
     def containsAction(self, action):
-        parts = action.split()
-        if parts[0] in self.action_dict:
-            if self.action_dict[parts[0]].match(parts[1:]):
+        action_name = action['name']
+        if action_name in self.action_dict:
+            arguments = action['arguments']
+            if self.action_dict[action_name].match(arguments):
                 self.number_of_contained_ops += 1
                 #print(action.name)
                 return True

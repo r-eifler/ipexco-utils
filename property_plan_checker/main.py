@@ -29,6 +29,7 @@ def run(domain_path, problem_path, properties_path, task_schema_path, plan_path,
 
 	planParser = PlanParser(domain_path, problem_path, plan_path, json_task_schema)
 	actions, states = planParser.run()
+	# print("Plan length: " + str(len(actions)))
 	if not actions or not states:
 		return None
 	# plan.print()
@@ -46,14 +47,14 @@ def run(domain_path, problem_path, properties_path, task_schema_path, plan_path,
 			sat_props.append(prop.name)
 
 	for prop in EXPSET.get_ltl_properties():
-		#print(prop)
+		# print(prop)
 		if prop.vars_only_action_sets():
 			sat = prop.checkPlan(actions)
 		else:
 			if prop.vars_only_facts():
 				sat = prop.checkStates(states)
 			else:
-				assert False, 'You can not used facts and action sets in the same planProperty'
+				assert False, 'You cannot used facts and action sets in the same planProperty'
 		if sat:
 			if print_res:
 				print(prop.name)

@@ -31,8 +31,9 @@ class LTLProperty(PlanProperty):
         return newPlan
 
     def checkPlan(self, plan):
-        processedPlan = self.buildEnvironment(plan)
-        return self.formula.evalLTL(processedPlan)
+        # processedPlan = self.buildEnvironment(plan)
+        # print("processedPlan length: " + str(len(processedPlan)))
+        return self.formula.evalLTL(plan)
 
     def checkStates(self, states):
         return self.formula.evalLTL(states)
