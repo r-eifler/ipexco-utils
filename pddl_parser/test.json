@@ -1,0 +1,5007 @@
+{
+ "constants": [
+  {
+   "name": "fside",
+   "type": "side"
+  },
+  {
+   "name": "bside",
+   "type": "side"
+  },
+  {
+   "name": "snum0",
+   "type": "swapnum"
+  },
+  {
+   "name": "snum1",
+   "type": "swapnum"
+  },
+  {
+   "name": "dummy-jig",
+   "type": "jig"
+  }
+ ],
+ "objects": [
+  {
+   "name": "bside",
+   "type": "side"
+  },
+  {
+   "name": "fside",
+   "type": "side"
+  },
+  {
+   "name": "dummy-jig",
+   "type": "jig"
+  },
+  {
+   "name": "snum0",
+   "type": "swapnum"
+  },
+  {
+   "name": "snum1",
+   "type": "swapnum"
+  },
+  {
+   "name": "bt1",
+   "type": "truck"
+  },
+  {
+   "name": "ft1",
+   "type": "truck"
+  },
+  {
+   "name": "rack01",
+   "type": "rack"
+  },
+  {
+   "name": "rack02",
+   "type": "rack"
+  },
+  {
+   "name": "jig0001",
+   "type": "jig"
+  },
+  {
+   "name": "jig0002",
+   "type": "jig"
+  },
+  {
+   "name": "jig0003",
+   "type": "jig"
+  },
+  {
+   "name": "jig0004",
+   "type": "jig"
+  },
+  {
+   "name": "jig0005",
+   "type": "jig"
+  },
+  {
+   "name": "jig0006",
+   "type": "jig"
+  },
+  {
+   "name": "beluga0",
+   "type": "beluga"
+  },
+  {
+   "name": "beluga1",
+   "type": "beluga"
+  },
+  {
+   "name": "hanger1",
+   "type": "hanger"
+  },
+  {
+   "name": "pla",
+   "type": "production-line"
+  },
+  {
+   "name": "n00",
+   "type": "num"
+  },
+  {
+   "name": "n01",
+   "type": "num"
+  },
+  {
+   "name": "n02",
+   "type": "num"
+  },
+  {
+   "name": "n03",
+   "type": "num"
+  },
+  {
+   "name": "n04",
+   "type": "num"
+  },
+  {
+   "name": "n05",
+   "type": "num"
+  },
+  {
+   "name": "n06",
+   "type": "num"
+  },
+  {
+   "name": "snum2",
+   "type": "swapnum"
+  },
+  {
+   "name": "snum3",
+   "type": "swapnum"
+  },
+  {
+   "name": "snum4",
+   "type": "swapnum"
+  },
+  {
+   "name": "snum5",
+   "type": "swapnum"
+  }
+ ],
+ "initial": [
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "bt1",
+     "type": "truck"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "bt1",
+     "type": "truck"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "ft1",
+     "type": "truck"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "ft1",
+     "type": "truck"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack01",
+     "type": "rack"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack01",
+     "type": "rack"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "free-space",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack01",
+     "type": "rack"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack02",
+     "type": "rack"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack02",
+     "type": "rack"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "free-space",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack02",
+     "type": "rack"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "to_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "jig0003",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "jig0001",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "dummy-jig",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "to_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "jig0005",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "jig0006",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "dummy-jig",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "hanger1",
+     "type": "hanger"
+    }
+   ]
+  },
+  {
+   "name": "to_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "pla",
+     "type": "production-line"
+    }
+   ]
+  },
+  {
+   "name": "next_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "jig0005",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "next_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "jig0004",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "next_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "jig0006",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "next_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "dummy-jig",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n00",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n00",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n00",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    },
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n00",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n00",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n00",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n05",
+     "type": "num"
+    },
+    {
+     "name": "n01",
+     "type": "num"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n04",
+     "type": "num"
+    },
+    {
+     "name": "n02",
+     "type": "num"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n03",
+     "type": "num"
+    },
+    {
+     "name": "n06",
+     "type": "num"
+    },
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "in-phase",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next-phase",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "to_load",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "dummy-jig",
+     "type": "jig"
+    },
+    {
+     "name": "beluga0",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "outgoing",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "to_load",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_load",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "dummy-jig",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "total-swaps",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum2",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum2",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum2",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum2",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum3",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum3",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum3",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum3",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum4",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum4",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum4",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum4",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum5",
+     "type": "swapnum"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0001",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0003",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "bside",
+     "type": "side"
+    },
+    {
+     "name": "snum0",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    },
+    {
+     "name": "fside",
+     "type": "side"
+    },
+    {
+     "name": "snum1",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "rack-not-in-use",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "rack-not-in-use",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  }
+ ],
+ "goal": [
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0005",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0004",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0006",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "jig0002",
+     "type": "jig"
+    },
+    {
+     "name": "beluga1",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "total-swaps",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "snum5",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "rack-not-in-use",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack01",
+     "type": "rack"
+    }
+   ]
+  },
+  {
+   "name": "rack-not-in-use",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "rack02",
+     "type": "rack"
+    }
+   ]
+  }
+ ],
+ "types": [
+  {
+   "name": "location",
+   "parent": "object"
+  },
+  {
+   "name": "production-line",
+   "parent": "object"
+  },
+  {
+   "name": "swapnum",
+   "parent": "object"
+  },
+  {
+   "name": "side",
+   "parent": "object"
+  },
+  {
+   "name": "num",
+   "parent": "object"
+  },
+  {
+   "name": "jig",
+   "parent": "location"
+  },
+  {
+   "name": "beluga",
+   "parent": "location"
+  },
+  {
+   "name": "truck",
+   "parent": "location"
+  },
+  {
+   "name": "hanger",
+   "parent": "location"
+  },
+  {
+   "name": "rack",
+   "parent": "location"
+  }
+ ],
+ "predicates": [
+  {
+   "name": "in",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "l",
+     "type": "location"
+    }
+   ]
+  },
+  {
+   "name": "empty",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "l",
+     "type": "location"
+    }
+   ]
+  },
+  {
+   "name": "at-side",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "l",
+     "type": "location"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "outgoing",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "b",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "to_load",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "b",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_load",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "j2",
+     "type": "jig"
+    },
+    {
+     "name": "b",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "in-phase",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "b",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "to_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "b",
+     "type": "beluga"
+    }
+   ]
+  },
+  {
+   "name": "next_unload",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "j2",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "to_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "pl",
+     "type": "production-line"
+    }
+   ]
+  },
+  {
+   "name": "next_deliver",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "j2",
+     "type": "jig"
+    }
+   ]
+  },
+  {
+   "name": "size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "n",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "empty-size",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "n",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "swap-stack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    },
+    {
+     "name": "sn",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "swap-unstack-count",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    },
+    {
+     "name": "sn",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "clear",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "free-space",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "r",
+     "type": "location"
+    },
+    {
+     "name": "n",
+     "type": "num"
+    }
+   ]
+  },
+  {
+   "name": "fit",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n1",
+     "type": "num"
+    },
+    {
+     "name": "n2",
+     "type": "num"
+    },
+    {
+     "name": "n3",
+     "type": "num"
+    },
+    {
+     "name": "r",
+     "type": "location"
+    }
+   ]
+  },
+  {
+   "name": "next",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "ns",
+     "type": "swapnum"
+    },
+    {
+     "name": "nl",
+     "type": "swapnum"
+    },
+    {
+     "name": "na",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "total-swaps",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "n",
+     "type": "swapnum"
+    }
+   ]
+  },
+  {
+   "name": "rack-not-in-use",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "r",
+     "type": "location"
+    }
+   ]
+  },
+  {
+   "name": "on",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "j1",
+     "type": "jig"
+    },
+    {
+     "name": "j2",
+     "type": "jig"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    }
+   ]
+  },
+  {
+   "name": "next-phase",
+   "negated": false,
+   "parameters": [
+    {
+     "name": "b",
+     "type": "beluga"
+    },
+    {
+     "name": "nb",
+     "type": "beluga"
+    }
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "name": "load-beluga",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "b",
+     "type": "beluga"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "jn",
+     "type": "jig"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "outgoing",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "to_load",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "next_load",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "jn",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "in-phase",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "outgoing",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "to_load",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "to_load",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "jn",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "unload-beluga",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "b",
+     "type": "beluga"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "nj",
+     "type": "jig"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "to_unload",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "next_unload",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "nj",
+       "type": "jig"
+      }
+     ]
+    },
+    {
+     "name": "in-phase",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "to_unload",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "to_unload",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "get-from-hanger",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "h",
+     "type": "hanger"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "h",
+       "type": "hanger"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "h",
+       "type": "hanger"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "h",
+       "type": "hanger"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "deliver-to-hanger",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "h",
+     "type": "hanger"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "pl",
+     "type": "production-line"
+    },
+    {
+     "name": "jn",
+     "type": "jig"
+    },
+    {
+     "name": "s",
+     "type": "num"
+    },
+    {
+     "name": "es",
+     "type": "num"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "h",
+       "type": "hanger"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "to_deliver",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "pl",
+       "type": "production-line"
+      }
+     ]
+    },
+    {
+     "name": "next_deliver",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "jn",
+       "type": "jig"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "empty-size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "es",
+       "type": "num"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      }
+     ]
+    },
+    {
+     "name": "to_deliver",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "pl",
+       "type": "production-line"
+      }
+     ]
+    },
+    {
+     "name": "to_deliver",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "jn",
+       "type": "jig"
+      },
+      {
+       "name": "pl",
+       "type": "production-line"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "h",
+       "type": "hanger"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "h",
+       "type": "hanger"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "es",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "swap-stack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      },
+      {
+       "name": "snum0",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-stack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      },
+      {
+       "name": "snum1",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-unstack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      },
+      {
+       "name": "snum1",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-unstack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      },
+      {
+       "name": "snum0",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "put-down-rack",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "r",
+     "type": "rack"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    },
+    {
+     "name": "jsize",
+     "type": "num"
+    },
+    {
+     "name": "fspace",
+     "type": "num"
+    },
+    {
+     "name": "nspace",
+     "type": "num"
+    },
+    {
+     "name": "sn",
+     "type": "swapnum"
+    },
+    {
+     "name": "csn",
+     "type": "swapnum"
+    },
+    {
+     "name": "nsn",
+     "type": "swapnum"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "fit",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nspace",
+       "type": "num"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "next",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      },
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-stack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "nspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "rack-not-in-use",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "stack-rack",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "nj",
+     "type": "jig"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "r",
+     "type": "rack"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    },
+    {
+     "name": "os",
+     "type": "side"
+    },
+    {
+     "name": "jsize",
+     "type": "num"
+    },
+    {
+     "name": "fspace",
+     "type": "num"
+    },
+    {
+     "name": "nspace",
+     "type": "num"
+    },
+    {
+     "name": "sn",
+     "type": "swapnum"
+    },
+    {
+     "name": "csn",
+     "type": "swapnum"
+    },
+    {
+     "name": "nsn",
+     "type": "swapnum"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "=",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "os",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "=",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "nj",
+       "type": "jig"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "fit",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nspace",
+       "type": "num"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "next",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      },
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-stack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "on",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "on",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "os",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "nspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "pick-up-rack",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "r",
+     "type": "rack"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    },
+    {
+     "name": "so",
+     "type": "side"
+    },
+    {
+     "name": "jsize",
+     "type": "num"
+    },
+    {
+     "name": "fspace",
+     "type": "num"
+    },
+    {
+     "name": "nspace",
+     "type": "num"
+    },
+    {
+     "name": "sn",
+     "type": "swapnum"
+    },
+    {
+     "name": "csn",
+     "type": "swapnum"
+    },
+    {
+     "name": "nsn",
+     "type": "swapnum"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "=",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "so",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "fit",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "fspace",
+       "type": "num"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      },
+      {
+       "name": "nspace",
+       "type": "num"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "next",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      },
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-unstack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "bside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "fside",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "nspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "unstack-rack",
+   "parameters": [
+    {
+     "name": "j",
+     "type": "jig"
+    },
+    {
+     "name": "nj",
+     "type": "jig"
+    },
+    {
+     "name": "t",
+     "type": "truck"
+    },
+    {
+     "name": "r",
+     "type": "rack"
+    },
+    {
+     "name": "s",
+     "type": "side"
+    },
+    {
+     "name": "os",
+     "type": "side"
+    },
+    {
+     "name": "jsize",
+     "type": "num"
+    },
+    {
+     "name": "fspace",
+     "type": "num"
+    },
+    {
+     "name": "nspace",
+     "type": "num"
+    },
+    {
+     "name": "sn",
+     "type": "swapnum"
+    },
+    {
+     "name": "csn",
+     "type": "swapnum"
+    },
+    {
+     "name": "nsn",
+     "type": "swapnum"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "=",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "os",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "=",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "nj",
+       "type": "jig"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "at-side",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "on",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "on",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "os",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "size",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "fit",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "fspace",
+       "type": "num"
+      },
+      {
+       "name": "jsize",
+       "type": "num"
+      },
+      {
+       "name": "nspace",
+       "type": "num"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "next",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      },
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "swap-unstack-count",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      },
+      {
+       "name": "sn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "in",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "r",
+       "type": "rack"
+      }
+     ]
+    },
+    {
+     "name": "empty",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "t",
+       "type": "truck"
+      }
+     ]
+    },
+    {
+     "name": "on",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "on",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "j",
+       "type": "jig"
+      },
+      {
+       "name": "os",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "clear",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nj",
+       "type": "jig"
+      },
+      {
+       "name": "s",
+       "type": "side"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "nspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "free-space",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "r",
+       "type": "rack"
+      },
+      {
+       "name": "fspace",
+       "type": "num"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nsn",
+       "type": "swapnum"
+      }
+     ]
+    },
+    {
+     "name": "total-swaps",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "csn",
+       "type": "swapnum"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "beluga-complete",
+   "parameters": [
+    {
+     "name": "b",
+     "type": "beluga"
+    },
+    {
+     "name": "nb",
+     "type": "beluga"
+    }
+   ],
+   "precondition": [
+    {
+     "name": "in-phase",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "next-phase",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "b",
+       "type": "beluga"
+      },
+      {
+       "name": "nb",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "to_unload",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "dummy-jig",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "to_load",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "dummy-jig",
+       "type": "jig"
+      },
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    }
+   ],
+   "effect": [
+    {
+     "name": "in-phase",
+     "negated": true,
+     "parameters": [
+      {
+       "name": "b",
+       "type": "beluga"
+      }
+     ]
+    },
+    {
+     "name": "in-phase",
+     "negated": false,
+     "parameters": [
+      {
+       "name": "nb",
+       "type": "beluga"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
