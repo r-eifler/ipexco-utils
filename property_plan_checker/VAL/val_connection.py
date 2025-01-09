@@ -93,7 +93,7 @@ class VALConnection:
         line = lines.pop(0)
         while not line.startswith("-----------"):
             if len(lines) == 0:
-                print(cmd)
+                # print(cmd)
                 return None, None
             # assert len(lines) > 0, cmd
             line = lines.pop(0)

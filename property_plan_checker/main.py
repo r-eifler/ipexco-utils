@@ -24,14 +24,14 @@ def run(domain_path, problem_path, properties_path, task_schema_path, plan_path,
 	parse(properties_path, typeObjectMap, EXPSET)
 
 	# print("Properties parsed ...")
-	# print("#ASP: " + str(len(EXPSET.action_set_properties)))
-	# print("#LTLP: " + str(len(EXPSET.ltl_properties)))
+	# print("#AS: " + str(len(EXPSET.action_set_properties)))
+	# print("#LTL: " + str(len(EXPSET.ltl_properties)))
 
 	planParser = PlanParser(domain_path, problem_path, plan_path, json_task_schema)
 	actions, states = planParser.run()
 	# print("Plan length: " + str(len(actions)))
-	if not actions or not states:
-		return None
+	# if not actions or not states:
+	# 	return None
 	# plan.print()
 	# print("--------------------------------------------------")
 	# print("Properties parsed ...")

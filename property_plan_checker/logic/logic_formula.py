@@ -522,8 +522,8 @@ class OpAlways(Operator):
         self.operand = operand
 
     def evalLTL(self, plan):
-        # if(len(plan) == 0):
-        #     return True
+        if(len(plan) == 0):
+            return True
         head = plan.head()
         tail = plan.tail()
         return self.operand.evalLTL(head) and (len(tail) == 0 or self.evalLTL(tail))
