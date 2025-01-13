@@ -19,12 +19,12 @@ class VALConnection:
     def add_states(self, plan_path, plan):
         # print("Add states ...")
         initial_state = self.get_initial_state()
+        plan.add(initial_state)
 
         state_changes, cost = self.get_state_changes(plan_path)
         if not state_changes:
             return 
 
-        plan.add(initial_state)
         for change in state_changes:
             next_state = plan.elems[-1].copy()
             # print("Current state:")
