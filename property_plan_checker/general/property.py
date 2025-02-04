@@ -1,7 +1,8 @@
 
 class PlanProperty:
 
-    def __init__(self, name, formula):
+    def __init__(self, id, name, formula):
+        self._id = id
         self.name = name
         self.formula = formula
         self.actionSets = []

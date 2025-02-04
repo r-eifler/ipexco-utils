@@ -23,7 +23,7 @@ class PlanParser:
         plan = Plan()
         for a in actions:
             plan.add(a)
-            original_task_actions.append( '(' + a['name'] + ' ' + ' '.join(a['arguments']) + ')\n')
+            original_task_actions.append( '(' + a['name'] + ' ' + ' '.join(a['params']) + ')\n')
 
         self.sas_plan_path = self.plan_path.replace('.json', '_sas')
 

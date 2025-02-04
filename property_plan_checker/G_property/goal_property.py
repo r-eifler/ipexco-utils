@@ -3,14 +3,14 @@ from general.property import PlanProperty
 
 class GoalProperty(PlanProperty):
 
-    def __init__(self, name, formula):
-        super().__init__(name, formula)
+    def __init__(self, id, name, formula):
+        super().__init__(id, name, formula)
 
 
     @staticmethod
     def fromJSON(json, typeObjectMap):
         formula = json['formula']
-        new_property = GoalProperty(json['name'], formula)
+        new_property = GoalProperty(json['_id'], json['name'], formula)
         return new_property
 
     def check(self, states):

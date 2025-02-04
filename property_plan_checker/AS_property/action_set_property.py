@@ -5,8 +5,8 @@ from action_sets.action import ActionSet
 
 class ActionSetProperty(PlanProperty):
 
-    def __init__(self, name, formula, constants=[]):
-        super().__init__(name, formula)
+    def __init__(self, id, name, formula, constants=[]):
+        super().__init__(id, name, formula)
         # names of the set names that are used in the property
         self.constants = constants
 
@@ -40,7 +40,7 @@ class ActionSetProperty(PlanProperty):
     def fromJSON(json, typeObjectMap):
         (formula, rest, constants) = parseFormula(json['formula'])
         assert len(rest) == 0, json['formula'] + " " + str(rest)
-        new_property = ActionSetProperty(json['name'], formula, constants)
+        new_property = ActionSetProperty(json['_id'], json['name'], formula, constants)
         for actionSets_json in json['actionSets']:
             new_property.add_action_set(ActionSet.fromJSON(actionSets_json, typeObjectMap, False))
         return new_property

@@ -43,8 +43,8 @@ def run(domain_path, problem_path, properties_path, task_schema_path, plan_path,
 		sat = prop.check(actions)
 		if sat:
 			if print_res:
-				print(prop.name)
-			sat_props.append(prop.name)
+				print(prop._id)
+			sat_props.append(prop._id)
 
 	for prop in EXPSET.get_ltl_properties():
 		# print(prop)
@@ -57,15 +57,15 @@ def run(domain_path, problem_path, properties_path, task_schema_path, plan_path,
 				assert False, 'You cannot used facts and action sets in the same planProperty'
 		if sat:
 			if print_res:
-				print(prop.name)
-			sat_props.append(prop.name)
+				print(prop._id)
+			sat_props.append(prop._id)
 
 	for prop in EXPSET.get_goal_properties():
 		sat = prop.check(states)
 		if sat:
 			if print_res:
-				print(prop.name)
-			sat_props.append(prop.name)
+				print(prop._id)
+			sat_props.append(prop._id)
 
 	return sat_props
 

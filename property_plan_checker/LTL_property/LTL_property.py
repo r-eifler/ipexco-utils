@@ -6,8 +6,8 @@ from general.plan import Plan
 
 class LTLProperty(PlanProperty):
 
-    def __init__(self, name, formula, constants):
-        super().__init__(name, formula)
+    def __init__(self, id, name, formula, constants):
+        super().__init__(id, name, formula)
         self.constants = constants
         
     def SAS_repr(self, actionSets):
@@ -17,7 +17,7 @@ class LTLProperty(PlanProperty):
     def fromJSON(json, typeObjectMap):
         (formula, rest, constants) = parseFormula(json['formula'])
         assert len(rest) == 0, json['formula'] + " " + str(rest)
-        new_property = LTLProperty(json['name'], formula, constants)
+        new_property = LTLProperty(json['_id'], json['name'], formula, constants)
         for actionSets_json in json['actionSets']:
             new_property.add_action_set(ActionSet.fromJSON(actionSets_json, typeObjectMap, True))
         return new_property
