@@ -6,3 +6,5 @@ __pycache__/
 test_openai_api.py
 .venv
 alice*
+
+pddl_parser/tests
